@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   end
 
   get '/robots.txt', to: 'static#robots'
+  get '/jwt', to: 'static#jwt'
+
+  get '/*landing_page', to: 'static#default_landing', constraints: LandingPageConstraint.matches?
 
   get 'markdown/show'
 
@@ -46,10 +49,6 @@ Rails.application.routes.draw do
   }
 
   get '/documentation', to: 'static#documentation'
-
-  get '/hansel', to: 'static#podcast'
-
-  get '/spotlight', to: 'static#developer_spotlight'
 
   get '/migrate/tropo', to: 'static#migrate'
   get '/migrate/tropo/(/*guide)', to: 'static#migrate_details'

@@ -7,7 +7,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.5'
+gem 'rails', '~> 5.2.0'
 gem 'webpacker', '~>3.5.5'
 
 # Use postgresql as the database for Active Record
@@ -105,7 +105,7 @@ gem 'factory_bot_rails', '4.8.2', require: false
 gem 'slack-notifier', '2.3.1'
 
 # The administration framework for Ruby on Rails.
-gem 'activeadmin', '1.1.0'
+gem 'activeadmin', '~> 1.0'
 
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '4.4.3'
@@ -143,6 +143,9 @@ gem 'autoprefixer-rails'
 # Titleize modifies the existing Titleize Rails functionality to better suit our needs
 gem 'titleize'
 
+# Used in our reporting rake tasks
+gem 'terminal-table'
+
 group :development, :test do
   gem 'awesome_print'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -174,3 +177,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # The following are dependencies of dependencies, but we require them here to
 # force minimum versions due to security issues
 gem 'ffi', '>= 1.9.24'
+gem 'rack', '>= 2.0.6'
