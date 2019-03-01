@@ -23,6 +23,7 @@ title: Landing Pages
     - [Section Header](#section-header)
     - [Sessions](#sessions)
     - [Structured Text](#structured-text)
+    - [Table][#table]
     - [Text](#text)
     - [Tutorial](#tutorial)
     - [Unordered List](#unordered-list)
@@ -315,6 +316,31 @@ The `structured_text` content block provides the styling for a block of text con
 ```
 
 You can specify as many `text` blocks as you would like. Each `text` block consists of `content` and `type`.
+
+### Table
+
+The `table` content block provides you with the ability to insert a table into your landing page, including with markdown formatting for the data in the table body. It is structured as follows:
+
+```yaml
+
+- type: table
+  table:
+    head:
+      - content: # First column header
+      - content: # Second column header
+    body:
+      - row:
+        content:
+          - column: # First row, first column text
+          - column: # First row, second column text
+      - row:
+        content: 
+          - column: # Second row, first column text
+          - column: # Second row, second column text
+
+```
+
+You can specify as many header `content` and body row `column` blocks as you would like.
 
 ### Text
 
